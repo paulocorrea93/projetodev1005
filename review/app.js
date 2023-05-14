@@ -33,3 +33,7 @@ const img = document.getElementById("person-img");
 const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
+
+const prevButton = document.getElementById("prev-btn");
+const nextButton = document.getElementById("next-btn");
+const randomButton = document.getElementById("random-btn");
