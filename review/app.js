@@ -49,9 +49,18 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const showPerson = (person) => {
-    const item = reviews[person]
-    img.src = item.image
-    author.textContent = item.author
-    job.textContent = item.job
-    info.textContent = item.info
-}
+  const item = reviews[person];
+  img.src = item.image;
+  author.textContent = item.author;
+  job.textContent = item.job;
+  info.textContent = item.info;
+};
+
+nextButton.addEventListener("click", () => {
+  currentItem++;
+  if (currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+
+  showPerson(currentItem);
+});
