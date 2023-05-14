@@ -64,3 +64,12 @@ nextButton.addEventListener("click", () => {
 
   showPerson(currentItem);
 });
+
+prevButton.addEventListener("click", () => {
+  currentItem--;
+  if (currentItem < 0) {
+    currentItem = reviews.length - 1;
+  }
+
+  showPerson(currentItem);
+});
