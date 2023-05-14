@@ -47,3 +47,11 @@ window.addEventListener("DOMContentLoaded", () => {
   job.textContent = item.job;
   info.textContent = item.text;
 });
+
+const showPerson = (person) => {
+    const item = reviews[person]
+    img.src = item.image
+    author.textContent = item.author
+    job.textContent = item.job
+    info.textContent = item.info
+}
