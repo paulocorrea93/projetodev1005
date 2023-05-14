@@ -42,7 +42,7 @@ let currentItem = 0;
 
 window.addEventListener("DOMContentLoaded", () => {
   const item = reviews[currentItem];
-  img.src = item.img;
+  img.src = item.image;
   author.textContent = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
