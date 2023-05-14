@@ -243,7 +243,7 @@ main {
     margin-bottom: 0.75rem;
 }
 
-.prev-btn, .next-btm{
+.prev-btn, .next-btn{
     color: var(--clr-primary-7);
     font-size: 1.25rem;
     background: transparent;
@@ -260,7 +260,7 @@ main {
 .random-btn{
     margin-top: 0.5rem;
     background: var(--clr-primary-10);
-    color: var(--clr-primary-5);
+    color: var(--clr-primary-1);
     padding: 0.25rem 0.5rem;
     text-transform: capitalize;
     border-radius: var(--radius);

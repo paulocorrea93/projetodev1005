@@ -34,9 +34,9 @@ const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
 
-const prevButton = document.getElementById("prev-btn");
-const nextButton = document.getElementById("next-btn");
-const randomButton = document.getElementById("random-btn");
+const prevButton = document.querySelector(".prev-btn");
+const nextButton = document.querySelector(".next-btn");
+const randomButton = document.querySelector(".random-btn");
 
 let currentItem = 0;
 
@@ -63,7 +63,7 @@ nextButton.addEventListener("click", () => {
   }
 
   showPerson(currentItem);
-});
+})
 
 prevButton.addEventListener("click", () => {
   currentItem--;
