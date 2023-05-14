@@ -37,3 +37,13 @@ const info = document.getElementById("info");
 const prevButton = document.getElementById("prev-btn");
 const nextButton = document.getElementById("next-btn");
 const randomButton = document.getElementById("random-btn");
+
+let currentItem = 0;
+
+window.addEventListener("DOMContentLoaded", () => {
+  const item = reviews[currentItem];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+});
