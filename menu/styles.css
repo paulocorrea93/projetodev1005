@@ -232,12 +232,12 @@ Menu
 .photo{
     object-fit: cover;
     height: 200px;
-    border: 0.5px dotted var(--clr-grey-5);
 }
 
 .item-info header{
     display: flex;
     justify-content: space-between;
+    border-bottom: 0.5px dotted var(--clr-grey-5);
 }
 
 .price{
