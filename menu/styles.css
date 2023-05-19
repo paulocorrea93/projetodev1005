@@ -232,6 +232,8 @@ Menu
 .photo{
     object-fit: cover;
     height: 200px;
+    border: 0.25rem solid var(--clr-gold);
+    border-radius: var(--radius);
 }
 
 .item-info header{
