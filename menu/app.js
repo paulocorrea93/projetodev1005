@@ -109,12 +109,20 @@ const displayMenuItems = (menuItems) => {
 };
 
 const displayMenuButtons = () => {
-  const categories = menu.reduce((values, item) => {
-    if (!values.include(item.category)) {
-      values.push(item.category);
-    }
+  const categories = menu.reduce(
+    (values, item) => {
+      if (!values.include(item.category)) {
+        values.push(item.category);
+      }
 
-    return values;
-  },["all"]
- );
+      return values;
+    },
+    ["all"]
+  );
+
+  const categoryButtons = categories
+    .map((category) => {
+      return `<button type="button" class="filter-btn" data-id=${category}> ${category}</button>`;
+    })
+    .join("");
 };
