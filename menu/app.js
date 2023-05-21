@@ -120,29 +120,29 @@ const displayMenuButtons = () => {
     ["all"]
   );
 
-  const categoryButtons = categories
+  const categoryBtns = categories
     .map((category) => {
       return `<button type="button" class="filter-btn" data-id=${category}> ${category}</button>`;
     })
     .join("");
-};
 
-btnContainer.innerHTML = categoryButtons;
-const filterBtn = btnContainer.querySelectorAll(".filter-btn");
+  btnContainer.innerHTML = categoryBtns;
+  const filterBtn = btnContainer.querySelectorAll(".filter-btn");
 
-filterBtn.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    const category = e.currentTarget.dataset.id;
-    const menuCategory = menu.filter((menuItem) => {
-      if (menuItem.category === category) {
-        return menuItem;
+  filterBtn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const category = e.currentTarget.dataset.id;
+      const menuCategory = menu.filter((menuItem) => {
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
+
+      if (category === "all") {
+        displayMenuItems(menu);
+      } else {
+        displayMenuItems(menuCategory);
       }
     });
-
-    if (category === "all") {
-      displayMenuItems(menu);
-    } else {
-      displayMenuItems(menuCategory);
-    }
   });
-});
+};
