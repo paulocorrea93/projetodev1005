@@ -103,7 +103,7 @@ const displayMenuItems = (menuItems) => {
         </article>`;
   });
 
-  displayMenu.join("");
+  displayMenu = displayMenu.join("");
 
   sectionCenter.innerHTML = displayMenu;
 };
@@ -130,7 +130,7 @@ const displayMenuButtons = () => {
 btnContainer.innerHTML = categoryBtns;
   const filterBtns = btnContainer.querySelectorAll(".filter-btn");
   console.log(filterBtns);
-
+    
   filterBtns.forEach(function (btn) {
     btn.addEventListener("click", function (e) {
       // console.log(e.currentTarget.dataset);
