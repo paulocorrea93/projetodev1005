@@ -111,7 +111,7 @@ const displayMenuItems = (menuItems) => {
 const displayMenuButtons = () => {
   const categories = menu.reduce(
     (values, item) => {
-      if (!values.include(item.category)) {
+      if (!values.includes(item.category)) {
         values.push(item.category);
       }
 
