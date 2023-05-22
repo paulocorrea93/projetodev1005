@@ -196,7 +196,7 @@ Video
     transition: var(--transition);
 }
 
-.hide-placeholder{
+.hide-preloader{
     z-index: -999;
     visibility: hidden;
 }
