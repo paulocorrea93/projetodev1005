@@ -142,9 +142,9 @@ btnContainer.innerHTML = categoryBtns;
         }
       });
       if (category === "all") {
-        diplayMenuItems(menu);
+        displayMenuItems(menu);
       } else {
-        diplayMenuItems(menuCategory);
+        displayMenuItems(menuCategory);
       }
     });
   });
