@@ -92,7 +92,7 @@ window.addEventListener("DOMContentLoaded", () => {
 const displayMenuItems = (menuItems) => {
   let displayMenu = menuItems.map((item) => {
     return `<article class="menu-item">
-        <img src=${item.img} alt=${item.title} class="photo"
+        <img src=${item.img} alt=${item.title} class="photo"/>
         <div class="item-info">
         <header> 
         <h4>${item.title}</h4>
