@@ -188,3 +188,11 @@ main {
   display: grid;
   place-items: center;
 }
+
+
+/* projeto scroll */
+
+nav{
+    background: var(--clr-white);
+    padding: 1rem 1.5rem;
+}
