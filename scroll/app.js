@@ -19,19 +19,34 @@ navToggle.addEventListener("click", () => {
 const navBar = document.getElementById("nav");
 const topLink = document.querySelector(".top-link");
 
-window.addEventListener('Scroll', () => {
-    const scrollHeight = window.pageYOffset;
-    const navheight = navBar.getBoundingClientRect.height;
+window.addEventListener("Scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  const navheight = navBar.getBoundingClientRect.height;
 
-    if(scrollHeight > navheight){
-        navBar.classList.add('fixed-nav')
-    } else {
-        navBar.classList.remove('fixed-nav')
-    }
+  if (scrollHeight > navheight) {
+    navBar.classList.add("fixed-nav");
+  } else {
+    navBar.classList.remove("fixed-nav");
+  }
 
-    if(scrollHeight > 500){
-        topLink.classList.add('show-link')
-    } else {
-        topLink.classList.remove('show-link')
-    }
-})
+  if (scrollHeight > 500) {
+    topLink.classList.add("show-link");
+  } else {
+    topLink.classList.remove("show-link");
+  }
+});
+
+const scrollLinks = document.querySelectorAll(".scrill-link");
+scrollLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const id = e.currentTarget.getAttribute("href").slice(1);
+    const element = document.getElementById(id);
+
+    const navHeight = navBar.getBoundingClientRect().height;
+    const containerHeight = linksContainer.getBoundingClientRect().height;
+    const fixedNav = navBar.classList.contains("fixed-nav");
+    let position = element.offsetTop - navHeight;
+  });
+});
