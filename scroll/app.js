@@ -15,3 +15,17 @@ navToggle.addEventListener("click", () => {
     linksContainer.style.height = 0;
   }
 });
+
+const navBar = document.getElementById("nav");
+const topLink = document.querySelector(".top-link");
+
+window.addEventListener('Scroll', () => {
+    const scrollHeight = window.pageYOffset;
+    const navheight = navBar.getBoundingClientRect.height;
+
+    if(scrollHeight > navheight){
+        navBar.classList.add('fixed-nav')
+    } else {
+        navBar.classList.remove('fixed-nav')
+    }
+})
