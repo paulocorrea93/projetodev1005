@@ -46,5 +46,11 @@ giveaways.textContent = `giveways ends on ${weekday}, ${date}, ${month}, ${year}
 
 const futureTime = futureDate.getTime();
 const gestRemindingTime = () => {
-  const today = new Date ().getTime();
-}
+  const today = new Date().getTime();
+
+  const t = futureTime - today;
+
+  const oneDay = 24 * 60 * 60 * 1000;
+  const oneHour = 60 * 60 * 1000;
+  const oneMinute = 60 * 1000;
+};
