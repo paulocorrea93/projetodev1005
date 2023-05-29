@@ -41,7 +41,7 @@ const minutes = futureDate.getMinutes();
 let month = futureDate.getMonth();
 month = months[month];
 const weekday = weekdays[futureDate.getDay()];
-const date = futureDate.getDate;
+const date = futureDate.getDate();
 giveaway.textContent = `giveways ends on ${weekday}, ${date}, ${month}, ${year}, ${hours}:${minutes}`;
 
 const futureTime = futureDate.getTime();
