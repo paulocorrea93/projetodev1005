@@ -73,4 +73,12 @@ const gestRemindingTime = () => {
     item.innerHTML = format.apply(values[index])
   })
 
+  if(t < 0){
+    clearInterval(countdown)
+    deadline.innerHTML = `<h4 class="expired"> sorry, this giveaway has expired! </h4>`
+  }
+
 };
+
+let countdown = setTimeInterval(gestRemindingTime, 1000);
+gestRemindingTime() 
