@@ -53,4 +53,11 @@ const gestRemindingTime = () => {
   const oneDay = 24 * 60 * 60 * 1000;
   const oneHour = 60 * 60 * 1000;
   const oneMinute = 60 * 1000;
+
+  let days = t / oneDay
+
+  days = Math.floor(days)
+  let hours = Math.floor((t % oneDay) / oneHour)
+  let minutes = Math.floor ((t % oneHour) / oneMinute)
+  let seconds = Math.floor((t % oneMinute) / 1000)
 };
