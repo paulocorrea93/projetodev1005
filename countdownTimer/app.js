@@ -45,7 +45,7 @@ const date = futureDate.getDate;
 giveaways.textContent = `giveways ends on ${weekday}, ${date}, ${month}, ${year}, ${hours}:${minutes}`;
 
 const futureTime = futureDate.getTime();
-const gestRemindingTime = () => {
+const getRemindingTime = () => {
   const today = new Date().getTime();
 
   const t = futureTime - today;
@@ -80,5 +80,5 @@ const gestRemindingTime = () => {
 
 };
 
-let countdown = setTimeInterval(gestRemindingTime, 1000);
-gestRemindingTime() 
+let countdown = setTimeInterval(getRemindingTime, 1000);
+getRemindingTime() 
