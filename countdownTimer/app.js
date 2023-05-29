@@ -62,7 +62,7 @@ const gestRemindingTime = () => {
   let seconds = Math.floor((t % oneMinute) / 1000)
 
   const values = [days, hours, minutes, seconds]
-  const format = (item) {
+  const format = (item) => {
     if (item < 10){
       return (item = `0${item}`)
     }
