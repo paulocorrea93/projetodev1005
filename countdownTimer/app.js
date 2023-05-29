@@ -40,9 +40,9 @@ const minutes = futureDate.getMinutes();
 
 let month = futureDate.getMonth();
 month = months[month];
-const weekday = weekday[futureDate.getDay()];
+const weekday = weekdays[futureDate.getDay()];
 const date = futureDate.getDate;
-giveaways.textContent = `giveways ends on ${weekday}, ${date}, ${month}, ${year}, ${hours}:${minutes}`;
+giveaway.textContent = `giveways ends on ${weekday}, ${date}, ${month}, ${year}, ${hours}:${minutes}`;
 
 const futureTime = futureDate.getTime();
 const getRemindingTime = () => {
