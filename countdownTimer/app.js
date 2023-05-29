@@ -68,4 +68,9 @@ const gestRemindingTime = () => {
     }
     return item;
   }
+
+  items.forEach((item, index) => {
+    item.innerHTML = format.apply(values[index])
+  })
+
 };
