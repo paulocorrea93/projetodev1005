@@ -23,14 +23,14 @@ const weekdays = [
   "Domingo",
 ];
 
-const giveaways = document.querySelector(".giveaway");
-const deadline = document.querySelector(".deadline");
-const items = document.querySelectorAll(".deadline-format h4");
+const giveaway = document.querySelector('.giveaway');
+const deadline = document.querySelector('.deadline');
+const items = document.querySelectorAll('.deadline-format h4');
 
 let tempDate = new Date();
 let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
-let tempDay = tempDate.getDay();
+let tempDay = tempDate.getDate();
 
 const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 
