@@ -43,3 +43,8 @@ month = months[month];
 const weekday = weekday[futureDate.getDay()];
 const date = futureDate.getDate;
 giveaways.textContent = `giveways ends on ${weekday}, ${date}, ${month}, ${year}, ${hours}:${minutes}`;
+
+const futureTime = futureDate.getTime();
+const gestRemindingTime = () => {
+  const today = new Date ().getTime();
+}
