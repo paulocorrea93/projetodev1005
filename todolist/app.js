@@ -14,6 +14,23 @@ let editID = "";
 
 // event listeners
 
+// enviar formulário
 form.addEventListener("submit", addItem);
+
+// limpar lista
 clearBtn.addEventListener("click", clearItems);
+
+// mostrar itens ao carregar a página
 window.addEventListener("DOMContentLoaded", setupItems);
+
+const addItem = (e) => {
+    e.preventDefault()
+    const value = grocery.value;
+    const id = new Date().getTime().toString();
+
+    if(value !== "" && !editFlag){
+        const element = document.createElement("article")
+        let attr = document.createAttribute("data-id")
+        attr.value = id;
+    }
+}
