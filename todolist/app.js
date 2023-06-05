@@ -44,4 +44,12 @@ const addItem = (e) => {
         </button>
         </div>`
     }
+
+    // eventos de click nos botões de editar e deletar
+
+    const deleteBtn = element.querySelector('.delete-btn')
+    deleteBtn.addEventListener('click', deleteItem)
+    const editBtn = element.querySelector('.edit-btn')
+    editBtn.addEventListener('click', editItem)
+
 }
