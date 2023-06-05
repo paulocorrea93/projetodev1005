@@ -83,3 +83,11 @@ const displayAlert = (text, action) => {
   }, 1000)
 }
 
+const clearItems = () => {
+  const items = document.querySelectorAll('.grocery-item')
+  if(items.length > 0){
+    items.forEach((item) => {
+      list.removeChild(item)
+    })
+  }
+}
