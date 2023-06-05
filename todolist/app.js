@@ -1,4 +1,4 @@
-// seleção de itens
+i// seleção de itens
 
 const form = document.querySelector(".grocery-form");
 const alert = document.querySelector(".alert");
@@ -32,5 +32,16 @@ const addItem = (e) => {
         const element = document.createElement("article")
         let attr = document.createAttribute("data-id")
         attr.value = id;
+        element.setAttribbuteNode(attr);
+        element.classList.add("grocery-item");
+        element.innerHTML = `<p class="title"> ${value}</p>
+        <div class="btn-container">
+        <button type="button" class="edit-btn">
+        <i class=fas fa-edit"></i>
+        </button>
+        <button type="button" class="delete-btn">
+        <i class="fas fa-trash"></i>
+        </button>
+        </div>`
     }
 }
