@@ -91,3 +91,8 @@ const clearItems = () => {
     })
   }
 }
+
+container.classList.remove('show-container')
+displayAlert("limpar lista", "danger")
+setBackToDefault()
+localStorage.removeItem('list')
