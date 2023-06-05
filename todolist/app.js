@@ -90,9 +90,9 @@ const clearItems = () => {
       list.removeChild(item)
     })
   }
+  container.classList.remove('show-container')
+  displayAlert("limpar lista", "danger")
+  setBackToDefault()
+  localStorage.removeItem('list')
 }
 
-container.classList.remove('show-container')
-displayAlert("limpar lista", "danger")
-setBackToDefault()
-localStorage.removeItem('list')
