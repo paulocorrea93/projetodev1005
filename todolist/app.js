@@ -65,51 +65,68 @@ const addItem = (e) => {
     editLocalStorage(editID, value);
     setBackToDefault();
   } else {
-    displayAlert("Por favor, digite algo", "danger")
+    displayAlert("Por favor, digite algo", "danger");
   }
 };
 
 // display alert
 
 const displayAlert = (text, action) => {
-  alert.textContext = text
-  alert.classList.add(`alert-${action}`)
+  alert.textContext = text;
+  alert.classList.add(`alert-${action}`);
 
   // remove alert
 
   setTimeout(() => {
-    alert.textContent = ""
-    alert.classList.remove(`alert-${action}`)
-  }, 1000)
-}
+    alert.textContent = "";
+    alert.classList.remove(`alert-${action}`);
+  }, 1000);
+};
 
 const clearItems = () => {
-  const items = document.querySelectorAll('.grocery-item')
-  if(items.length > 0){
+  const items = document.querySelectorAll(".grocery-item");
+  if (items.length > 0) {
     items.forEach((item) => {
-      list.removeChild(item)
-    })
+      list.removeChild(item);
+    });
   }
-  container.classList.remove('show-container')
-  displayAlert("limpar lista", "danger")
-  setBackToDefault()
-  localStorage.removeItem('list')
-}
+  container.classList.remove("show-container");
+  displayAlert("limpar lista", "danger");
+  setBackToDefault();
+  localStorage.removeItem("list");
+};
 
 const deleteItem = (e) => {
-    const element = e.currentTarget.parentElement.parentElement;
-    const id = element.dataset.id
+  const element = e.currentTarget.parentElement.parentElement;
+  const id = element.dataset.id;
 
-    list.removeChild(element)
+  list.removeChild(element);
 
-    if(list.children.length === 0){
-      container.classList.remove("show-container")
-    }
-    displayAlert("item removido", "danger")
+  if (list.children.length === 0) {
+    container.classList.remove("show-container");
+  }
+  displayAlert("item removido", "danger");
 
-    setBackToDefault()
+  setBackToDefault();
 
-    // remover da localstorage
+  // remover da localstorage
 
-    removeFromLocalStorage(id)
-}
+  removeFromLocalStorage(id);
+};
+
+// editar item
+
+const editItem = (e) => {
+  const element = e.currentTarget.parentElement.parentElement;
+
+  // set edit item
+
+  editElement = e.currentTarget.parentElement.previousElementSibling;
+
+  // set form value
+
+  grocery.value = editElement.innerHTML;
+  editFlag = true;
+  editID = element.dataset.id;
+  submitBtn.textContent = "edit";
+};
