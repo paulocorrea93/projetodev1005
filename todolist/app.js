@@ -68,3 +68,18 @@ const addItem = (e) => {
     displayAlert("Por favor, digite algo", "danger")
   }
 };
+
+// display alert
+
+const displayAlert = (text, action) => {
+  alert.textContext = text
+  alert.classList.add(`alert-${action}`)
+
+  // remove alert
+
+  setTimeout(() => {
+    alert.textContent = ""
+    alert.classList.remove(`alert-${action}`)
+  }, 1000)
+}
+
