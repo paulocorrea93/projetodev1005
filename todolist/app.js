@@ -52,17 +52,19 @@ const addItem = (e) => {
     editBtn.addEventListener("click", editItem);
 
     list.appendChild(element);
-    displayAlert("item adicionado a lista", "sucesso");
+    displayAlert("item adicionado a lista", "success");
     container.classList.add("show-container");
     addToLocalStorage(id, value);
     setBackToDefault();
   } else if (value !== "" && editFlag) {
     editElement.innerHTML = value;
-    displayAlert("valor alterado", "sucesso");
+    displayAlert("valor alterado", "success");
 
     // editar no 'banco de dados' fake
 
     editLocalStorage(editID, value);
     setBackToDefault();
+  } else {
+    displayAlert("Por favor, digite algo", "danger")
   }
 };
