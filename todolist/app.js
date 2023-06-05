@@ -130,3 +130,12 @@ const editItem = (e) => {
   editID = element.dataset.id;
   submitBtn.textContent = "edit";
 };
+
+// set back to default
+
+const setBackToDefault = () => {
+  grocery.value = "";
+  editFlag = false;
+  editID = "";
+  submitBtn.textContext = "submit";
+};
