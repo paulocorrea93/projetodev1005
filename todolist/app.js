@@ -43,13 +43,19 @@ const addItem = (e) => {
         <i class="fas fa-trash"></i>
         </button>
         </div>`
+
+        // eventos de click nos botões de editar e deletar
+    
+        const deleteBtn = element.querySelector('.delete-btn')
+        deleteBtn.addEventListener('click', deleteItem)
+        const editBtn = element.querySelector('.edit-btn')
+        editBtn.addEventListener('click', editItem)
+    
+        list.appendChild(element)
+        displayAlert("item adicionado a lista", "sucesso")
+        container.classList.add("show-container")
+        addToLocalStorage(id, value)
+        setBackToDefault()
     }
-
-    // eventos de click nos botões de editar e deletar
-
-    const deleteBtn = element.querySelector('.delete-btn')
-    deleteBtn.addEventListener('click', deleteItem)
-    const editBtn = element.querySelector('.edit-btn')
-    editBtn.addEventListener('click', editItem)
 
 }
