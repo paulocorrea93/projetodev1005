@@ -191,3 +191,18 @@ const setupItems = () => {
     container.classList.add('show-container')
   }
 }
+
+const createListItem = (id, value) => {
+  const element = document.createElement('article')
+  let attr = document.createAttribute('data-id')
+  attr.value = id
+  element.setAttributeNode(attr)
+  element.classList.add('grocery-item')
+  element.innerHTML = `<p class="title"> ${value}</p>
+  <div class="btn-container">
+  <button type="button" class="edit-btn">
+  <i class="fas fa-edit"></i>
+  </button>
+  </div>`
+}
+
