@@ -150,3 +150,21 @@ const addLocalStorage = (id, value) => {
   items.push(grocery);
   localStorage.setItem("list", JSON.stringify(items));
 };
+
+const getLocalStorage = () => {
+  return localStorage.getItem("list")
+    ? JSON.parse(localStorage.getItem("list"))
+    : [];
+};
+
+const removeFromLocalStorage = () => {
+  let items = getLocalStorage()
+
+  items = items.filter((item) => {
+    if(item.id !== id){
+      return item;
+    }
+  })
+
+  localStorage.setItem('list', JSON.stringify(items))
+}
