@@ -139,3 +139,14 @@ const setBackToDefault = () => {
   editID = "";
   submitBtn.textContext = "submit";
 };
+
+// local storage
+
+// adicionar itens ao local storage
+
+const addLocalStorage = (id, value) => {
+  const grocery = { id, value };
+  let items = getLocalStorage();
+  items.push(grocery);
+  localStorage.setItem("list", JSON.stringify(items));
+};
