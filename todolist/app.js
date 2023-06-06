@@ -158,51 +158,55 @@ const getLocalStorage = () => {
 };
 
 const removeFromLocalStorage = () => {
-  let items = getLocalStorage()
+  let items = getLocalStorage();
 
   items = items.filter((item) => {
-    if(item.id !== id){
+    if (item.id !== id) {
       return item;
     }
-  })
+  });
 
-  localStorage.setItem('list', JSON.stringify(items))
-}
+  localStorage.setItem("list", JSON.stringify(items));
+};
 
 const editLocalStorage = (id, value) => {
-  let items = getLocalStorage()
+  let items = getLocalStorage();
 
   items = items.map((item) => {
-    if(item.id === id){
-      item.value = value
+    if (item.id === id) {
+      item.value = value;
     }
     return item;
-  })
-  localStorage.setItem('list', JSON.stringify(items))
-}
+  });
+  localStorage.setItem("list", JSON.stringify(items));
+};
 
 const setupItems = () => {
-  let items = getLocalStorage()
+  let items = getLocalStorage();
 
-  if(items.length > 0){
+  if (items.length > 0) {
     items.forEach((item) => {
-      createListItem(item.id, item.value)
-    })
-    container.classList.add('show-container')
+      createListItem(item.id, item.value);
+    });
+    container.classList.add("show-container");
   }
-}
+};
 
 const createListItem = (id, value) => {
-  const element = document.createElement('article')
-  let attr = document.createAttribute('data-id')
-  attr.value = id
-  element.setAttributeNode(attr)
-  element.classList.add('grocery-item')
+  const element = document.createElement("article");
+  let attr = document.createAttribute("data-id");
+  attr.value = id;
+  element.setAttributeNode(attr);
+  element.classList.add("grocery-item");
   element.innerHTML = `<p class="title"> ${value}</p>
   <div class="btn-container">
   <button type="button" class="edit-btn">
   <i class="fas fa-edit"></i>
   </button>
-  </div>`
-}
+  </div>`;
+};
 
+const deleteBtn = element.querySelector(".delete-btn");
+deleteBtn.addEventListener("click", deleteBtn);
+const editBtn = element.querySelector(".edit-btn");
+editBtn.addEventListener("click", editBtn);
