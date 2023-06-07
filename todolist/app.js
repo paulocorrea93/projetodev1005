@@ -161,7 +161,7 @@ const getLocalStorage = () => {
     : [];
 };
 
-const removeFromLocalStorage = () => {
+const removeFromLocalStorage = (id) => {
   let items = getLocalStorage();
 
   items = items.filter((item) => {
@@ -207,11 +207,15 @@ const createListItem = (id, value) => {
   <button type="button" class="edit-btn">
   <i class="fas fa-edit"></i>
   </button>
+  <button type="button" class="delete-btn">
+  <i class="fas fa-trash"></i>
+  </button>
   </div>`;
+
+  const deleteBtn = element.querySelector(".delete-btn");
+  deleteBtn.addEventListener("click", deleteItem);
+  const editBtn = element.querySelector(".edit-btn");
+  editBtn.addEventListener("click", editItem);
+
+  list.appendChild(element);
 };
-
-const deleteBtn = element.querySelector(".delete-btn");
-deleteBtn.addEventListener("click", deleteItem);
-const editBtn = element.querySelector(".edit-btn");
-editBtn.addEventListener("click", editItem);
-
