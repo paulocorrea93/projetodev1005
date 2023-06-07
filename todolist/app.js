@@ -219,3 +219,5 @@ const createListItem = (id, value) => {
 
   list.appendChild(element);
 };
+
+// finalizada versão 1.0
