@@ -95,7 +95,7 @@ function clearItems() {
     });
   }
   container.classList.remove("show-container");
-  displayAlert("empty list", "danger");
+  displayAlert("empty list", "danger")
   setBackToDefault();
   localStorage.removeItem("list");
 }
@@ -214,3 +214,4 @@ const deleteBtn = element.querySelector(".delete-btn");
 deleteBtn.addEventListener("click", deleteItem);
 const editBtn = element.querySelector(".edit-btn");
 editBtn.addEventListener("click", editItem);
+
