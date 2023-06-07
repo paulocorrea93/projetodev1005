@@ -185,16 +185,16 @@ const editLocalStorage = (id, value) => {
   localStorage.setItem("list", JSON.stringify(items));
 };
 
-const setupItems = () => {
+function setupItems() {
   let items = getLocalStorage();
 
   if (items.length > 0) {
-    items.forEach((item) => {
+    items.forEach(function (item) {
       createListItem(item.id, item.value);
     });
     container.classList.add("show-container");
   }
-};
+}
 
 const createListItem = (id, value) => {
   const element = document.createElement("article");
