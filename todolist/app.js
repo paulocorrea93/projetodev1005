@@ -76,7 +76,7 @@ function addItem(e) {
 // display alert
 
 const displayAlert = (text, action) => {
-  alert.textContext = text;
+  alert.textContent = text;
   alert.classList.add(`alert-${action}`);
 
   // remove alert
@@ -214,4 +214,3 @@ const deleteBtn = element.querySelector(".delete-btn");
 deleteBtn.addEventListener("click", deleteItem);
 const editBtn = element.querySelector(".edit-btn");
 editBtn.addEventListener("click", editItem);
-
