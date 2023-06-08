@@ -1,5 +1,5 @@
 const slides = document.querySelector(".slide");
-const nextBtn = document.querySelector(".netxBtn");
+const nextBtn = document.querySelector(".nextBtn");
 const prevBtn = document.querySelector(".prevBtn");
 
 slides.forEach((slide, index) => {
