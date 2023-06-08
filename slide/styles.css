@@ -251,3 +251,9 @@ main {
         height: 45vh;
     }
 }
+
+@media screen and (min-width: 768px){
+    .slider-container{
+        height: 55vh;
+    }
+}
