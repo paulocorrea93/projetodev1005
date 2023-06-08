@@ -245,3 +245,9 @@ main {
 .prevBtn:hover, .netxBtn:hover{
     color: var(--clr-grey-3);
 }
+
+@media screen and (min-width: 576px){
+    .slider-container{
+        height: 45vh;
+    }
+}
