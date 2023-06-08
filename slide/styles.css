@@ -257,3 +257,10 @@ main {
         height: 55vh;
     }
 }
+
+@media screen and (min-width: 992px){
+    .slider-container{
+        height: 65vh;
+    }
+}
+
