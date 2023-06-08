@@ -242,3 +242,6 @@ main {
     transition: var(--transition);
 }
 
+.prevBtn:hover, .netxBtn:hover{
+    color: var(--clr-grey-3);
+}
