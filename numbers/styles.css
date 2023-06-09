@@ -122,3 +122,20 @@ ul {
   display: block;
   object-fit: cover;
 }
+
+/* ------- */
+
+section{
+    padding: 5rem 0;
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 768px){
+    section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
