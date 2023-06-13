@@ -41,31 +41,67 @@
       </div>
     </nav>
     <section class="page-hero">
-        <div class="section-center">
-          <h3 class="page-hero-title">Home | Single Product Page</h3>
-        </div>
-      </section>
-      <div class="sidebar-overlay">
-        <aside class="sidebar">
-          <button class="sidebar-close">
-            <i class="fas fa-times"></i>
-          </button>
-          <ul class="sidebar-links">
-            <li>
-                <i class="fas fa-home fa-fw"></i>
-              <a href="index.html" class="sidebar-link">home</a>
-            </li>
-            <li>
-              <i class="fas fa-couch fa-fw"></i>
-              <a href="products.html" class="sidebar-link">products</a>
-            </li>
-            <li>
-              <i class="fas fa-book fa-fw"></i>
-              <a href="about.html" class="sidebar-link">about</a>
-            </li>
-          </ul>
-        </aside>
+      <div class="section-center">
+        <h3 class="page-hero-title">Home | Single Product Page</h3>
       </div>
+    </section>
+    <div class="sidebar-overlay">
+      <aside class="sidebar">
+        <button class="sidebar-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul class="sidebar-links">
+          <li>
+            <i class="fas fa-home fa-fw"></i>
+            <a href="index.html" class="sidebar-link">home</a>
+          </li>
+          <li>
+            <i class="fas fa-couch fa-fw"></i>
+            <a href="products.html" class="sidebar-link">products</a>
+          </li>
+          <li>
+            <i class="fas fa-book fa-fw"></i>
+            <a href="about.html" class="sidebar-link">about</a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+    <div class="cart-overlay">
+      <aside class="cart">
+        <button class="cart-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-slanted">your bag</h3>
+        </header>
+        <div class="cart-items"></div>
+        <footer>
+          <h3 class="cart-total text-slanted">total: R$12,00</h3>
+          <button class="cart-checkout btn"></button>
+        </footer>
+      </aside>
+    </div>
+    <section class="sigle-product">
+      <div class="section-center single-product-center">
+        <img src="images/main-bcg.jpeg" alt="" class="single-product-img img" />
+        <article class="single-product-info">
+          <div>
+            <h2 class="single-product-title">couch</h2>
+            <p class="single-product-company text-slanted">by Paulo</p>
+            <p class="single-product-price">R$30,00</p>
+            <div class="single-product-color"></div>
+            <p class="single-product-desc">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatibus cumque mollitia sunt distinctio ducimus nobis dolorum
+              pariatur consectetur id. Obcaecati ratione consequatur aut esse
+              architecto error nostrum! Non, dolore iure.
+            </p>
+            <button class="addToCartBtn btn" data-id="id">add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="page-loading">loading...</div>
 
     <script type="module" src="./src/pages/product.js"></script>
   </body>
