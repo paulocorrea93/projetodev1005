@@ -247,3 +247,39 @@ p {
     font-weight: bold;
     font-size: 1rem;
 }
+
+@media screen and (min-width: 800px){
+    .nav-center{
+        position: center;
+    }
+
+    .nav-logo{
+        position: absolute;
+        top: 50%;
+        left: 65%;
+        transform: translate(-50%, -50%);
+    }
+
+    .toggle-nav{
+        display: none;
+    }
+
+    .nav-links{
+        display: flex;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+
+    .nav-link{
+        color: var(--clr-white);
+        margin-right: 3rem;
+        letter-spacing: var(--spacing);
+        transition: var(--transition);
+        font-size: 1.25rem;
+    }
+
+    .nav-link:hover{
+        color: var(--clr-primary-5);
+    }
+
+}
