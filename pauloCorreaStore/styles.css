@@ -372,9 +372,9 @@ p {
   height: 100%;
   display: grid;
   place-items: center;
-  /* z-index: -1; */
+  z-index: -1;
   transition: var(--transition);
-  /* opacity: 0; */
+  opacity: 0;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -392,7 +392,7 @@ p {
   box-shadow: var(--dark-shadow);
   position: relative;
   padding: 4rem;
-  /* transform: scale(0) */
+  transform: scale(0);
 }
 
 .show .sidebar{
@@ -414,4 +414,16 @@ p {
   font-size: 1.5rem;
   text-transform: capitalize;
   color: var(--clr-grey-1);
+}
+
+.sidebar-link i{
+  color: var(--clr-grey-5);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px){
+  .sidebar-overlay{
+    display: none;
+  }
 }
