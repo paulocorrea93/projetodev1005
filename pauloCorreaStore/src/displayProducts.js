@@ -34,3 +34,5 @@ const display = (products, element, filters) => {
     }
   });
 };
+
+export default display;
