@@ -8,3 +8,6 @@ toggleNav.addEventListener('click', () => {
     sidebarOverlay.classList.add('show')
 })
 
+closeBtn.addEventListener('click', () => {
+    sidebarOverlay.classList.remove('show')
+})
