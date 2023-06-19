@@ -1,4 +1,4 @@
-h// importações globais
+h; // importações globais
 
 import "../toggleSidebar.js";
 import "../cart/toggleCart.js";
@@ -52,13 +52,20 @@ window.addEventListener("DOMContentLoaded", async function () {
         colorsDOM.appendChild(span);
       });
     } else {
-        console.log(response.status, response.statusText)
-        centerDOM.innerHTML = `
+      console.log(response.status, response.statusText);
+      centerDOM.innerHTML = `
         <div>
         <h3 class="error> sorry, something went wrong </h3>
-        <a href="index.html" class="btn">back home</a>`
+        <a href="index.html" class="btn">back home</a>
+        </div>`;
     }
   } catch (error) {
     console.log(error);
   }
+
+  loading.style.display = "none";
+});
+
+cartBtn.addEventListener("click", () => {
+  addToCart(productID);
 });
