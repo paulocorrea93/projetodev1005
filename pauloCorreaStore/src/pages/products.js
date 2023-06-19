@@ -23,4 +23,11 @@ const init = async () => {
     setupStore(products);
   }
   display(store, getElement(".products-container"));
+  setupSearch(store);
+  setupCompanies(store);
+  setupPrice(store);
+
+  loading.style.display = "none";
 };
+
+init();
