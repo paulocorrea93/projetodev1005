@@ -9,3 +9,15 @@ import "../cart/setupCart.js";
 import {addToCart} from '../cart/setupCart.js'
 import { singleProductUrl, getElement, formatPrice } from "../util.js";
 
+// seleção de elementos
+
+const loading = getElement('.page-loading')
+const centerDOM = getElement('.single-product-center')
+const pageTitleDOM = getElement('.page-hero-title')
+const imgDOM = getElement('.single-product-img')
+const titleDOM = getElement('.single-product-title')
+const companyDOM = getElement('.single-product-company')
+const priceDOM = getElement('.single-product-price')
+const colorsDOM = getElement('.single-product-colors')
+const descDOM = getElement('.single-product-desc')
+const cartBtn = getElement('.addToCartBtn')
